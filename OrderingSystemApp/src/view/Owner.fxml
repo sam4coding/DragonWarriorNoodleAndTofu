@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.OwnerController">
+   <children>
+      <TabPane layoutY="25.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <tabs>
+          <Tab text="Orders">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="ordersTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="Order_ID" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="65.0" text="Order ID" />
+                            <TableColumn fx:id="Updated_time" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="115.0" text="Updated time" />
+                              <TableColumn fx:id="Customer_Name" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Customer" />
+                              <TableColumn fx:id="Order_Dishes" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" text="Dishes" />
+                              <TableColumn fx:id="Servings" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" text="Servings" />
+                              <TableColumn fx:id="Status" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="70.0" text="Stauts" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Helpers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="HelpersTableView" prefHeight="347.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="helperIDTableColumn" prefWidth="152.0" text="helper ID" />
+                            <TableColumn fx:id="helperNameTableColumn" prefWidth="447.0" text="Helper Name" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Dishes">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="600.0">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="220.0" prefWidth="600.0">
+                          <content>
+                            <AnchorPane>
+                                 <children>
+                                    <GridPane fx:id="dishGallery" alignment="CENTER" gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="220.0" prefWidth="600.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="110.0" minHeight="110.0" prefHeight="110.0" vgrow="SOMETIMES" />
+                                        <RowConstraints fillHeight="false" maxHeight="110.0" minHeight="110.0" prefHeight="110.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <GridPane layoutY="220.0" prefHeight="112.0" prefWidth="600.0" style="-fx-border-color: gray;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="174.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="81.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="192.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="94.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="addDish" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addDish" text="Add" GridPane.valignment="BOTTOM" />
+                                    <Button fx:id="editDish" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#editDish" text="Edit" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Button fx:id="removeDish" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeDish" text="Remove" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dish Name" textAlignment="CENTER" wrappingWidth="71.998046875" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dish Image" textAlignment="CENTER" wrappingWidth="98.998046875" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Text boundsType="LOGICAL_VERTICAL_CENTER" layoutX="1.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dish Description" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="195.998046875" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="22.0" prefWidth="71.0" GridPane.columnIndex="3">
+                                 <children>
+                                    <Text boundsType="LOGICAL_VERTICAL_CENTER" layoutX="7.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Functions" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="96.998046875" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <GridPane GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="CENTER" wrappingWidth="68.998046875" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <TextField fx:id="dishName" text="Name" />
+                                    <TextField fx:id="price" text="0.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <center>
+                                    <ImageView fx:id="dishImage" fitHeight="80.0" fitWidth="90.0" onMouseClicked="#setImage" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                       <image>
+                                          <Image url="@../images/unknown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <center>
+                                    <TextArea fx:id="dishDescription" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="What will you choose?" wrapText="true" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Finance">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total orders" />
+                        <Text layoutX="14.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turnover" />
+                        <Text layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material cost" wrappingWidth="79.892578125" />
+                        <Text layoutX="14.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary cost" wrappingWidth="79.892578125" />
+                        <Text layoutX="14.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax rate" wrappingWidth="79.892578125" />
+                        <Text layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net profit" wrappingWidth="79.892578125" />
+                        <TextField fx:id="TotalOrders" editable="false" layoutX="119.0" layoutY="28.0" prefHeight="25.0" prefWidth="441.0" />
+                        <TextField fx:id="TurnOver" editable="false" layoutX="119.0" layoutY="74.0" prefHeight="25.0" prefWidth="441.0" />
+                        <TextField fx:id="MaterialCost" editable="false" layoutX="119.0" layoutY="121.0" prefHeight="25.0" prefWidth="441.0" />
+                        <TextField fx:id="SalaryCost" editable="false" layoutX="119.0" layoutY="169.0" prefHeight="25.0" prefWidth="441.0" />
+                        <TextField fx:id="TaxRate" editable="false" layoutX="119.0" layoutY="211.0" prefHeight="25.0" prefWidth="441.0" />
+                        <TextField fx:id="NetProfit" editable="false" layoutX="119.0" layoutY="250.0" prefHeight="25.0" prefWidth="441.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ButtonBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="600.0">
+        <buttons>
+          <Button fx:id="Get_an_order" mnemonicParsing="false" onAction="#get_an_order" text="Get an order" />
+            <Button fx:id="Refresh_the_page" mnemonicParsing="false" onAction="#Refresh_the_page" text="Refresh the page" />
+            <Button fx:id="Owner_exit" mnemonicParsing="false" onAction="#owner_exit" prefHeight="25.0" prefWidth="279.0" text="Exit" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
